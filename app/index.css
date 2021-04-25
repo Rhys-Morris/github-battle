@@ -22,6 +22,12 @@ li {
     padding: 50px;
 }
 
+.dark {
+    color: #DADADA;
+    background: #1c2022;
+    min-height: 100%;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -104,17 +110,17 @@ li {
     border-radius: 3px;
 }
 
-.repo {
+.card {
     margin: 10px 0;
     width: 250px;
     padding: 20px;
 }
 
-.repo a {
+.card a {
     text-decoration: none;
 }
 
-.repo img {
+.card img {
     margin-bottom: 8px;
 }
 
@@ -227,4 +233,34 @@ li {
 
 .player-info .link {
     margin-left: 10px;
+}
+
+.btn-space {
+    margin: 40px auto;
+}
+
+.error {
+    color: #ff1616;
+    font-size: 20px;
+    margin: 50px 0;
+}
+
+.bg-dark {
+    background-color: rgb(36, 40, 42);
+    border-radius: 3px;
+}
+
+.player-inputs .input-dark {
+    color: #DADADA;
+    background: rgba(0, 0,0,.3);
+}
+
+.btn-light {
+    color: #000;
+    background: #aaa8a8;
+}
+
+.btn-light:disabled {
+    background: #292929;
+    color: #4a4a4a;
 }
