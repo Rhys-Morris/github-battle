@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Hover from "./Hover.js";
+import useHover from "../hooks/useHover";
 
 // Tooltip styles
 const styles = {
@@ -25,20 +25,14 @@ const styles = {
   },
 };
 
-{
-  /* Hover's children element is a function! */
-}
-
 export default function Tooltip({ text, children }) {
+  const [hovering, attrs] = useHover();
+
   return (
-    <Hover>
-      {(hovering) => (
-        <div style={styles.container}>
-          {hovering && <div style={styles.tooltip}>{text}</div>}
-          {children}
-        </div>
-      )}
-    </Hover>
+    <div style={styles.container} {...attrs}>
+      {hovering && <div style={styles.tooltip}>{text}</div>}
+      {children}
+    </div>
   );
 }
 
